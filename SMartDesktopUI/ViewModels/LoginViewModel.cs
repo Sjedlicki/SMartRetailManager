@@ -1,5 +1,6 @@
 ﻿using Caliburn.Micro;
 using SMartDesktopUI.Helpers;
+using SMartDesktopUI.Library.Api;
 using System;
 using System.Threading.Tasks;
 
@@ -11,7 +12,7 @@ namespace SMartDesktopUI.ViewModels
         private string _password;
         private string _errorMessage;
 
-        private IAPIHelper _apiHelper;
+        private readonly IAPIHelper _apiHelper;
 
         public LoginViewModel(IAPIHelper apiHelper)
         {
@@ -92,6 +93,10 @@ namespace SMartDesktopUI.ViewModels
             {
                 ErrorMessage = "";
                 var result = await _apiHelper.Authenticate(UserName, Password);
+
+                // Capture more information about the user.
+
+                await _apiHelper.GetLoggedInUserInfo(result.Access_Token);
             }
             catch(Exception ex)
             {

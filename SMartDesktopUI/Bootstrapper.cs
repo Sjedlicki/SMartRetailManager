@@ -1,5 +1,7 @@
 ﻿using Caliburn.Micro;
 using SMartDesktopUI.Helpers;
+using SMartDesktopUI.Library.Api;
+using SMartDesktopUI.Library.Models;
 using SMartDesktopUI.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -34,7 +36,8 @@ namespace SMartDesktopUI
             _container
                 .Singleton<IWindowManager, WindowManager>()
                 .Singleton<IEventAggregator, EventAggregator>()
-                .Singleton<IAPIHelper, APIHelper>();            
+                .Singleton<ILoggedInUserModel, LoggedInUserModel>()
+                .Singleton<IAPIHelper, APIHelper>();
 
             GetType().Assembly.GetTypes()
                 .Where(type => type.IsClass)

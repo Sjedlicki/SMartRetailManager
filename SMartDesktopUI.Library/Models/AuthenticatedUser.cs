@@ -1,4 +1,4 @@
-﻿namespace SMartDesktopUI.Models
+﻿namespace SMartDesktopUI.Library.Models
 {
     public class AuthenticatedUser
     {
