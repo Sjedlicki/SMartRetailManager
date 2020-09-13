@@ -1,10 +1,6 @@
 ﻿using Caliburn.Micro;
 using SMartDesktopUI.Helpers;
 using System;
-using System.CodeDom;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SMartDesktopUI.ViewModels
@@ -13,6 +9,8 @@ namespace SMartDesktopUI.ViewModels
     {
         private string _userName;
         private string _password;
+        private string _errorMessage;
+
         private IAPIHelper _apiHelper;
 
         public LoginViewModel(IAPIHelper apiHelper)
@@ -42,6 +40,35 @@ namespace SMartDesktopUI.ViewModels
             }
         }
 
+        public bool IsErrorVisible
+        {
+            get 
+            {
+                bool output = false;
+                
+                if(ErrorMessage?.Length > 0)
+                {
+                    output = true;
+                }
+                
+                return output; 
+            }
+
+            set { }
+        }
+
+        public string ErrorMessage
+        {
+            get { return _errorMessage; }
+            set 
+            { 
+
+                _errorMessage = value;
+                NotifyOfPropertyChange(() => IsErrorVisible);
+                NotifyOfPropertyChange(() => ErrorMessage);
+            }
+        }
+
         public bool CanLogin
         {
             get
@@ -63,11 +90,12 @@ namespace SMartDesktopUI.ViewModels
         {
             try
             {
+                ErrorMessage = "";
                 var result = await _apiHelper.Authenticate(UserName, Password);
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                ErrorMessage = ex.Message;
             }            
         }
     }

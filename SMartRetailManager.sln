@@ -9,6 +9,10 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SMartData", "SMartData\SMar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMartDesktopUI", "SMartDesktopUI\SMartDesktopUI.csproj", "{76350B74-8CC1-48FB-AB92-E6EE1C945512}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMartDataManager.Library", "SMartDataManager.Library\SMartDataManager.Library.csproj", "{1D7902F5-9720-4EA3-9CB8-1D1C99167E58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMartDesktopUI.Library", "SMartDesktopUI.Library\SMartDesktopUI.Library.csproj", "{3101FA55-492B-41FF-932B-6B58842D96A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,14 @@ Global
 		{76350B74-8CC1-48FB-AB92-E6EE1C945512}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76350B74-8CC1-48FB-AB92-E6EE1C945512}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76350B74-8CC1-48FB-AB92-E6EE1C945512}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D7902F5-9720-4EA3-9CB8-1D1C99167E58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D7902F5-9720-4EA3-9CB8-1D1C99167E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D7902F5-9720-4EA3-9CB8-1D1C99167E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D7902F5-9720-4EA3-9CB8-1D1C99167E58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3101FA55-492B-41FF-932B-6B58842D96A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3101FA55-492B-41FF-932B-6B58842D96A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3101FA55-492B-41FF-932B-6B58842D96A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3101FA55-492B-41FF-932B-6B58842D96A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
